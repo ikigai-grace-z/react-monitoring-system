@@ -1,12 +1,5 @@
 import { useNavigate } from '@tanstack/react-router'
-import {
-  GalleryVerticalEnd,
-  ListVideo,
-  Minus,
-  Play,
-  Plus,
-  Video,
-} from 'lucide-react'
+import { GalleryVerticalEnd, ListVideo, Minus, Play, Plus } from 'lucide-react'
 import * as React from 'react'
 
 import {
@@ -43,11 +36,11 @@ const data = {
           route: '/vod',
           title: 'VOD',
         },
-        {
-          icon: Video,
-          route: '/time-shifting',
-          title: 'Time shifting',
-        },
+        // {
+        //   icon: Video,
+        //   route: '/time-shifting',
+        //   title: 'Time shifting',
+        // },
         // {
         //   title: 'Monitoring system',
         //   route: '/monitoring-system',
