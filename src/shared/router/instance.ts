@@ -10,6 +10,7 @@ export const router = createRouter({
     queryClient: query,
   },
   routeTree,
+  basepath: '/monitor-system',
 })
 
 // Register the router instance for type safety

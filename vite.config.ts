@@ -40,5 +40,6 @@ export default defineConfig(({ mode }) => {
       open: true,
       port: 23000,
     },
+    basepath: '/monitor-system',
   }
 })
