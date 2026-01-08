@@ -8,12 +8,12 @@ export const Route = createFileRoute('/live-stream')({
 
 function RouteComponent() {
   const live =
-    'https://livepull-bpsry.iki-utl.cc/live/aro0011hd.flv?abr_pts=-1000'
+    'https://livepull-bpsry.iki-utl.cc/live/aro0011lo.m3u8?abr_pts=-1000'
   const live2 =
-    'https://livepull-bpsry.iki-utl.cc/live/aro0021hd.flv?abr_pts=-1000'
+    'https://livepull-bpsry.iki-utl.cc/live/aro0021lo.m3u8?abr_pts=-1000'
 
   const sicbo =
-    'https://livepull-bpsry.iki-utl.cc/live/asb0011me.flv?abr_pts=-1000'
+    'https://livepull-bpsry.iki-utl.cc/live/asb0011lo.m3u8?abr_pts=-1000'
 
   return (
     <div className="w-fit p-4">
