@@ -1,5 +1,13 @@
 import { useNavigate } from '@tanstack/react-router'
-import { GalleryVerticalEnd, ListVideo, Minus, Play, Plus } from 'lucide-react'
+import {
+  GalleryVerticalEnd,
+  ListVideo,
+  Minus,
+  MonitorPlay,
+  Play,
+  Plus,
+  Video,
+} from 'lucide-react'
 import * as React from 'react'
 
 import {
@@ -28,24 +36,34 @@ const data = {
       items: [
         {
           icon: Play,
+          route: '/live-stream-libmedia',
+          title: 'Live - libmediaPlayer',
+        },
+        {
+          icon: Play,
           route: '/live-stream',
-          title: 'Live',
+          title: 'Live - byteplus',
+        },
+        {
+          icon: Play,
+          route: '/live-stream-ikgplayer',
+          title: 'Live - ikgplayer',
         },
         {
           icon: ListVideo,
           route: '/vod',
           title: 'VOD',
         },
-        // {
-        //   icon: Video,
-        //   route: '/time-shifting',
-        //   title: 'Time shifting',
-        // },
-        // {
-        //   title: 'Monitoring system',
-        //   route: '/monitoring-system',
-        //   icon: MonitorPlay,
-        // },
+        {
+          icon: Video,
+          route: '/time-shifting',
+          title: 'Time shifting',
+        },
+        {
+          icon: MonitorPlay,
+          title: 'Monitoring system',
+          route: '/monitoring-system',
+        },
       ],
       route: '/live-stream',
       title: 'Video',
@@ -97,7 +115,10 @@ function LayoutSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     <CollapsibleContent>
                       <SidebarMenuSub>
                         {item.items.map((item) => (
-                          <SidebarMenuSubItem key={item.title}>
+                          <SidebarMenuSubItem
+                            key={item.title}
+                            className="cursor-pointer"
+                          >
                             <SidebarMenuSubButton
                               onClick={() => {
                                 console.log('Navigating to', item.route)

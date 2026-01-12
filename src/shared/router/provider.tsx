@@ -5,6 +5,7 @@ import { router } from './instance'
 
 export function RouterProvider() {
   const showDevtools = false
+  console.log(import.meta.env, 'fff')
   return (
     <>
       <Provider router={router} />

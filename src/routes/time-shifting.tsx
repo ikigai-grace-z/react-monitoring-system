@@ -7,8 +7,8 @@ export const Route = createFileRoute('/time-shifting')({
 })
 
 function RouteComponent() {
-  const url =
-    'https://livepull-bpsry.iki-utl.cc/live/aro0011hd.flv?abr_pts=-1000'
+  const url = 'https://livepull-tcgi.iki-utl.cc/live/asb0011lo.flv'
+  // 'https://livepull-bpsry.iki-utl.cc/live/aro0021hi.m3u8?mode=3&start=1729853071&end=1729853371'
   // const url = 'https://livepull-bpgi.iki-utl.cc/live/aro0021lo.m3u8'
 
   return (

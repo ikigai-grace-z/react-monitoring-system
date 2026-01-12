@@ -1,0 +1,45 @@
+{
+  // Editor Settings
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "[typescript]": { "editor.formatOnSave": false },
+  "[typescriptreact]": { "editor.formatOnSave": false },
+  "workbench.editor.labelFormat": "short",
+  "scm.workingSets.enabled": true,
+
+  // Tailwind Settings
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+
+  // Tanstack Router Settings
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "search.exclude": {
+    "**/routeTree.gen.ts": true
+  },
+
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "cSpell.words": [
+    "ikgplayer",
+    "ikigaians",
+    "tailwindcss",
+    "rgba",
+    "byteplus",
+    "veplayer",
+    "oklch",
+    "sicbo",
+    "libmedia",
+    "avcodec",
+    "avformat",
+    "avnetwork",
+    "avplayer",
+    "avutil"
+  ]
+}

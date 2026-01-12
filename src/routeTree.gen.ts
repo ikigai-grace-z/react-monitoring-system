@@ -11,6 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VodRouteImport } from './routes/vod'
 import { Route as TimeShiftingRouteImport } from './routes/time-shifting'
+import { Route as MonitoringSystemRouteImport } from './routes/monitoring-system'
+import { Route as LiveStreamLibmediaRouteImport } from './routes/live-stream-libmedia'
+import { Route as LiveStreamIkgplayerRouteImport } from './routes/live-stream-ikgplayer'
 import { Route as LiveStreamRouteImport } from './routes/live-stream'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -22,6 +25,21 @@ const VodRoute = VodRouteImport.update({
 const TimeShiftingRoute = TimeShiftingRouteImport.update({
   id: '/time-shifting',
   path: '/time-shifting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MonitoringSystemRoute = MonitoringSystemRouteImport.update({
+  id: '/monitoring-system',
+  path: '/monitoring-system',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LiveStreamLibmediaRoute = LiveStreamLibmediaRouteImport.update({
+  id: '/live-stream-libmedia',
+  path: '/live-stream-libmedia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LiveStreamIkgplayerRoute = LiveStreamIkgplayerRouteImport.update({
+  id: '/live-stream-ikgplayer',
+  path: '/live-stream-ikgplayer',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LiveStreamRoute = LiveStreamRouteImport.update({
@@ -38,12 +56,18 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/live-stream': typeof LiveStreamRoute
+  '/live-stream-ikgplayer': typeof LiveStreamIkgplayerRoute
+  '/live-stream-libmedia': typeof LiveStreamLibmediaRoute
+  '/monitoring-system': typeof MonitoringSystemRoute
   '/time-shifting': typeof TimeShiftingRoute
   '/vod': typeof VodRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/live-stream': typeof LiveStreamRoute
+  '/live-stream-ikgplayer': typeof LiveStreamIkgplayerRoute
+  '/live-stream-libmedia': typeof LiveStreamLibmediaRoute
+  '/monitoring-system': typeof MonitoringSystemRoute
   '/time-shifting': typeof TimeShiftingRoute
   '/vod': typeof VodRoute
 }
@@ -51,20 +75,48 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/live-stream': typeof LiveStreamRoute
+  '/live-stream-ikgplayer': typeof LiveStreamIkgplayerRoute
+  '/live-stream-libmedia': typeof LiveStreamLibmediaRoute
+  '/monitoring-system': typeof MonitoringSystemRoute
   '/time-shifting': typeof TimeShiftingRoute
   '/vod': typeof VodRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/live-stream' | '/time-shifting' | '/vod'
+  fullPaths:
+    | '/'
+    | '/live-stream'
+    | '/live-stream-ikgplayer'
+    | '/live-stream-libmedia'
+    | '/monitoring-system'
+    | '/time-shifting'
+    | '/vod'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/live-stream' | '/time-shifting' | '/vod'
-  id: '__root__' | '/' | '/live-stream' | '/time-shifting' | '/vod'
+  to:
+    | '/'
+    | '/live-stream'
+    | '/live-stream-ikgplayer'
+    | '/live-stream-libmedia'
+    | '/monitoring-system'
+    | '/time-shifting'
+    | '/vod'
+  id:
+    | '__root__'
+    | '/'
+    | '/live-stream'
+    | '/live-stream-ikgplayer'
+    | '/live-stream-libmedia'
+    | '/monitoring-system'
+    | '/time-shifting'
+    | '/vod'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   LiveStreamRoute: typeof LiveStreamRoute
+  LiveStreamIkgplayerRoute: typeof LiveStreamIkgplayerRoute
+  LiveStreamLibmediaRoute: typeof LiveStreamLibmediaRoute
+  MonitoringSystemRoute: typeof MonitoringSystemRoute
   TimeShiftingRoute: typeof TimeShiftingRoute
   VodRoute: typeof VodRoute
 }
@@ -83,6 +135,27 @@ declare module '@tanstack/react-router' {
       path: '/time-shifting'
       fullPath: '/time-shifting'
       preLoaderRoute: typeof TimeShiftingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/monitoring-system': {
+      id: '/monitoring-system'
+      path: '/monitoring-system'
+      fullPath: '/monitoring-system'
+      preLoaderRoute: typeof MonitoringSystemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/live-stream-libmedia': {
+      id: '/live-stream-libmedia'
+      path: '/live-stream-libmedia'
+      fullPath: '/live-stream-libmedia'
+      preLoaderRoute: typeof LiveStreamLibmediaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/live-stream-ikgplayer': {
+      id: '/live-stream-ikgplayer'
+      path: '/live-stream-ikgplayer'
+      fullPath: '/live-stream-ikgplayer'
+      preLoaderRoute: typeof LiveStreamIkgplayerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/live-stream': {
@@ -105,6 +178,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LiveStreamRoute: LiveStreamRoute,
+  LiveStreamIkgplayerRoute: LiveStreamIkgplayerRoute,
+  LiveStreamLibmediaRoute: LiveStreamLibmediaRoute,
+  MonitoringSystemRoute: MonitoringSystemRoute,
   TimeShiftingRoute: TimeShiftingRoute,
   VodRoute: VodRoute,
 }

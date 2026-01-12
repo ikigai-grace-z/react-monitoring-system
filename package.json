@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "preview": "vite preview",
     "prepare": "husky",
-    "check-update": "pnpm update --interactive --latest"
+    "check-update": "pnpm update --interactive --latest",
+    "convert": "node convert.js"
   },
   "engines": {
     "node": ">=20.19.5",
@@ -21,6 +22,15 @@
   "packageManager": "pnpm@10.26.2",
   "dependencies": {
     "@byteplus/veplayer": "^1.15.1",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ikigaians/ikgplayer": "0.10.0-alpha.14",
+    "@libmedia/avcodec": "^1.2.0",
+    "@libmedia/avformat": "^1.2.0",
+    "@libmedia/avnetwork": "^1.2.0",
+    "@libmedia/avplayer": "^1.2.2",
+    "@libmedia/avutil": "^1.2.0",
+    "@libmedia/cheap": "^1.2.0",
+    "@libmedia/common": "^2.2.0",
     "@radix-ui/react-collapsible": "^1.1.12",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-label": "^2.1.8",
@@ -28,6 +38,7 @@
     "@radix-ui/react-slider": "^1.3.6",
     "@radix-ui/react-slot": "^1.2.4",
     "@radix-ui/react-tooltip": "^1.2.8",
+    "@rollup/plugin-typescript": "^12.3.0",
     "@tanstack/react-query": "^5.90.14",
     "@tanstack/react-query-devtools": "^5.91.2",
     "@tanstack/react-router": "^1.144.0",
@@ -35,6 +46,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.19",
+    "ikgplayer: 0.10.0-alpha.12": "link:@ikigaians/ikgplayer: 0.10.0-alpha.12",
     "lucide-react": "^0.562.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",

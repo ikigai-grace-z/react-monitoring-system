@@ -11,6 +11,33 @@ importers:
       '@byteplus/veplayer':
         specifier: ^1.15.1
         version: 1.15.1
+      '@ffmpeg-installer/ffmpeg':
+        specifier: ^1.1.0
+        version: 1.1.0
+      '@ikigaians/ikgplayer':
+        specifier: 0.10.0-alpha.14
+        version: 0.10.0-alpha.14
+      '@libmedia/avcodec':
+        specifier: ^1.2.0
+        version: 1.2.0
+      '@libmedia/avformat':
+        specifier: ^1.2.0
+        version: 1.2.0
+      '@libmedia/avnetwork':
+        specifier: ^1.2.0
+        version: 1.2.0
+      '@libmedia/avplayer':
+        specifier: ^1.2.2
+        version: 1.2.2
+      '@libmedia/avutil':
+        specifier: ^1.2.0
+        version: 1.2.0
+      '@libmedia/cheap':
+        specifier: ^1.2.0
+        version: 1.2.0
+      '@libmedia/common':
+        specifier: ^2.2.0
+        version: 2.2.0
       '@radix-ui/react-collapsible':
         specifier: ^1.1.12
         version: 1.1.12(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -32,6 +59,9 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.2.8
         version: 1.2.8(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@rollup/plugin-typescript':
+        specifier: ^12.3.0
+        version: 12.3.0(rollup@4.54.0)(tslib@2.8.1)(typescript@5.9.3)
       '@tanstack/react-query':
         specifier: ^5.90.14
         version: 5.90.14(react@19.2.3)
@@ -53,6 +83,9 @@ importers:
       dayjs:
         specifier: ^1.11.19
         version: 1.11.19
+      'ikgplayer: 0.10.0-alpha.12':
+        specifier: 'link:@ikigaians/ikgplayer: 0.10.0-alpha.12'
+        version: 'link:@ikigaians/ikgplayer: 0.10.0-alpha.12'
       lucide-react:
         specifier: ^0.562.0
         version: 0.562.0(react@19.2.3)
@@ -551,6 +584,49 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@ffmpeg-installer/darwin-arm64@4.1.5':
+    resolution: {integrity: sha512-hYqTiP63mXz7wSQfuqfFwfLOfwwFChUedeCVKkBtl/cliaTM7/ePI9bVzfZ2c+dWu3TqCwLDRWNSJ5pqZl8otA==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@ffmpeg-installer/darwin-x64@4.1.0':
+    resolution: {integrity: sha512-Z4EyG3cIFjdhlY8wI9aLUXuH8nVt7E9SlMVZtWvSPnm2sm37/yC2CwjUzyCQbJbySnef1tQwGG2Sx+uWhd9IAw==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@ffmpeg-installer/ffmpeg@1.1.0':
+    resolution: {integrity: sha512-Uq4rmwkdGxIa9A6Bd/VqqYbT7zqh1GrT5/rFwCwKM70b42W5gIjWeVETq6SdcL0zXqDtY081Ws/iJWhr1+xvQg==}
+
+  '@ffmpeg-installer/linux-arm64@4.1.4':
+    resolution: {integrity: sha512-dljEqAOD0oIM6O6DxBW9US/FkvqvQwgJ2lGHOwHDDwu/pX8+V0YsDL1xqHbj1DMX/+nP9rxw7G7gcUvGspSoKg==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@ffmpeg-installer/linux-arm@4.1.3':
+    resolution: {integrity: sha512-NDf5V6l8AfzZ8WzUGZ5mV8O/xMzRag2ETR6+TlGIsMHp81agx51cqpPItXPib/nAZYmo55Bl2L6/WOMI3A5YRg==}
+    cpu: [arm]
+    os: [linux]
+
+  '@ffmpeg-installer/linux-ia32@4.1.0':
+    resolution: {integrity: sha512-0LWyFQnPf+Ij9GQGD034hS6A90URNu9HCtQ5cTqo5MxOEc7Rd8gLXrJvn++UmxhU0J5RyRE9KRYstdCVUjkNOQ==}
+    cpu: [ia32]
+    os: [linux]
+
+  '@ffmpeg-installer/linux-x64@4.1.0':
+    resolution: {integrity: sha512-Y5BWhGLU/WpQjOArNIgXD3z5mxxdV8c41C+U15nsE5yF8tVcdCGet5zPs5Zy3Ta6bU7haGpIzryutqCGQA/W8A==}
+    cpu: [x64]
+    os: [linux]
+
+  '@ffmpeg-installer/win32-ia32@4.1.0':
+    resolution: {integrity: sha512-FV2D7RlaZv/lrtdhaQ4oETwoFUsUjlUiasiZLDxhEUPdNDWcH1OU9K1xTvqz+OXLdsmYelUDuBS/zkMOTtlUAw==}
+    cpu: [ia32]
+    os: [win32]
+
+  '@ffmpeg-installer/win32-x64@4.1.0':
+    resolution: {integrity: sha512-Drt5u2vzDnIONf4ZEkKtFlbvwj6rI3kxw1Ck9fpudmtgaZIHD4ucsWB2lCZBXRxJgXR+2IMSti+4rtM4C4rXgg==}
+    cpu: [x64]
+    os: [win32]
+
   '@floating-ui/core@1.7.3':
     resolution: {integrity: sha512-sGnvb5dmrJaKEZ+LDIpguvdX3bDlEllmv4/ClQ9awcmCZrlx5jQyyMWFM5kBI+EyNOCDDiKk8il0zeuX3Zlg/w==}
 
@@ -582,6 +658,9 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
+  '@ikigaians/ikgplayer@0.10.0-alpha.14':
+    resolution: {integrity: sha512-c5Bu4+RNAEOpLrWxv5XRPVEnbHU0XVxy0SEC7X3z6O0XJtUJgP6QhHYBNNiWo5yeqFl2ylFeMYCoWZyAKQuk3w==, tarball: https://npm.pkg.github.com/download/@ikigaians/ikgplayer/0.10.0-alpha.14/5ac10742b9618ed2832b812bbbf5949e09f839c6}
+
   '@isaacs/balanced-match@4.0.1':
     resolution: {integrity: sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==}
     engines: {node: 20 || >=22}
@@ -605,6 +684,42 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@libmedia/audioresample@1.2.0':
+    resolution: {integrity: sha512-AA9YqOynHrzESqj84MX6txaeFmAUptWy6cYCqZHaiuh8g6nfvpd0Y0ZcRrgQKrj9IchKG7FLN65vXygsydmYNg==}
+
+  '@libmedia/audiostretchpitch@1.2.0':
+    resolution: {integrity: sha512-XUXsqt/vS5/m7Vo57uVvDhgsAo/XNuxbPCd0u9XnfwAvPLeqnbT/rUVmU2D0/GcuSsdK6BdtvTidRCDsGQS0jQ==}
+
+  '@libmedia/avcodec@1.2.0':
+    resolution: {integrity: sha512-fLNZmNWXYxu0BhMVch/ypno3dfFSP57xrRi/9nVJrYxUxvrh9nBxB01DFLgqV9mIcgY/8fVIbvujLZSKGndhmA==}
+
+  '@libmedia/avformat@1.2.0':
+    resolution: {integrity: sha512-3Bs0TbS013qwWSGhAV3LvHdFNgco7k2di726RbejOAZMHOgIfVQRZDxcMPHa68Eomum2OTBKjSxYa1ZyNoLPrg==}
+
+  '@libmedia/avnetwork@1.2.0':
+    resolution: {integrity: sha512-HjdzMn8lv1PB1zFUuaWuazvO3QOKfXX+eGe+BibKSfh5Xi2QZBqmD4IXicQv6hekO+N+wdJSmmIisXSHnSVXiQ==}
+
+  '@libmedia/avpipeline@1.2.0':
+    resolution: {integrity: sha512-R5IQu9z5gHYXWY+wS+3Sl1rweBiJc7W10JlnQM5zloKTWclsz5fQMGevFcgqVmFjiAPi0GLQAmIHgTap43rdBg==}
+
+  '@libmedia/avplayer@1.2.2':
+    resolution: {integrity: sha512-2YRlftT9VknnGUQ9j5gj4RyJogpzQlqGrBg4Bm5mAw+oLeLazbYBKCwFgUhK83SuytVXTwyUcp/fYQzZsnvc3Q==}
+
+  '@libmedia/avprotocol@1.2.0':
+    resolution: {integrity: sha512-gBteAW+IUmMyPIvn5fNYFvxVrz8PGP5dSyqi0s1tvNLR9ckRomOPS0yBnnE4w6WOoP6Kf3DSdifUNcp91YWehQ==}
+
+  '@libmedia/avrender@1.2.0':
+    resolution: {integrity: sha512-vb6wW8dPtmXAsvd6Lxk1nJ2wUlQJ/CK4UekhtC7IgN8J+9ybl7lp1kkByVyiaffxa8z9lhBvZZRdr6aaOtTeMg==}
+
+  '@libmedia/avutil@1.2.0':
+    resolution: {integrity: sha512-/O9jiuFi33XS3O7Qp/qM2HxkglXlmZEUXiX4WMUO2lDg9zOOWXCcz9Sy+ADljy2NMNmL8f8D3G+Wkxa+IqLrMA==}
+
+  '@libmedia/cheap@1.2.0':
+    resolution: {integrity: sha512-MznflChbjaYnH25wlPoORlZQXdw2IqlrxsKVJirHFRAvkhhqmFj89jfn/I8psXdYCR56k8LQfGl3zVyqlRXugA==}
+
+  '@libmedia/common@2.2.0':
+    resolution: {integrity: sha512-ScNUKvmpfNn4zOZItFY78K0Nnkb404hE5suPLe2x8rVb8/BN1avXfyOudZo23aO518a4ERUK7NrFuadsK5ZxzA==}
 
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
@@ -967,6 +1082,28 @@ packages:
 
   '@rolldown/pluginutils@1.0.0-beta.53':
     resolution: {integrity: sha512-vENRlFU4YbrwVqNDZ7fLvy+JR1CRkyr01jhSiDpE1u6py3OMzQfztQU2jxykW3ALNxO4kSlqIDeYyD0Y9RcQeQ==}
+
+  '@rollup/plugin-typescript@12.3.0':
+    resolution: {integrity: sha512-7DP0/p7y3t67+NabT9f8oTBFE6gGkto4SA6Np2oudYmZE/m1dt8RB0SjL1msMxFpLo631qjRCcBlAbq1ml/Big==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^2.14.0||^3.0.0||^4.0.0
+      tslib: '*'
+      typescript: '>=3.7.0'
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+      tslib:
+        optional: true
+
+  '@rollup/pluginutils@5.3.0':
+    resolution: {integrity: sha512-5EdhGZtnu3V88ces7s53hhfK5KSASnJZv8Lulpc04cWO3REESroJXg73DFsOmgbU2BhwV0E20bu2IDZb3VKW4Q==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
 
   '@rollup/rollup-android-arm-eabi@4.54.0':
     resolution: {integrity: sha512-OywsdRHrFvCdvsewAInDKCNyR3laPA2mc9bRYJ6LBp5IyvF3fvXbbNR0bSzHlZVFtn6E0xw2oZlyjg4rKCVcng==}
@@ -1583,6 +1720,12 @@ packages:
   array-ify@1.0.0:
     resolution: {integrity: sha512-c5AMf34bKdvPhQ7tBGhqkgKNUzMr4WUs+WDtC2ZUGOUncbxKMTvqxYctiseW3+L4bA8ec+GcZ6/A/FW4m8ukng==}
 
+  ass-compiler@0.1.16:
+    resolution: {integrity: sha512-t6RvH8ebL47t5a62XcrxMwxh1JQoOykydpT5bSVqqf9HA9/rbFl+9JgckBVTA5QdvfwuhYD5yrSc2n3u1tsjhA==}
+
+  assjs@0.1.4:
+    resolution: {integrity: sha512-qjHXBH8mcCBYfnB/vL/girh1MunM+IDyVhSJ3TPUdkK1n1OYQvGnB2A8LEFX195bBUAl47kXmgC2HGOAwKz/kA==}
+
   ast-types@0.16.1:
     resolution: {integrity: sha512-6t10qk83GOG8p0vKmaCr8eiilZwO171AvbROMtvvNiwrTly62t+7XkA8RdIIVbpMhCASAsxgAzdRSwh6nw/5Dg==}
     engines: {node: '>=4'}
@@ -1666,6 +1809,10 @@ packages:
 
   colorette@2.0.20:
     resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
+
+  commander@13.1.0:
+    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
+    engines: {node: '>=18'}
 
   commander@14.0.2:
     resolution: {integrity: sha512-TywoWNNRbhoD0BXs1P3ZEScW8W5iKrnbithIl0YH+uCmBd0QpPOA8yc82DS3BIE5Ma6FnBVUsJ7wVUDz4dvOWQ==}
@@ -1919,6 +2066,9 @@ packages:
     resolution: {integrity: sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==}
     engines: {node: '>=4.0'}
 
+  estree-walker@2.0.2:
+    resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
+
   esutils@2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
@@ -1977,6 +2127,9 @@ packages:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+
+  function-bind@1.1.2:
+    resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
 
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
@@ -2037,6 +2190,10 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
+  hasown@2.0.2:
+    resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
+    engines: {node: '>= 0.4'}
+
   hermes-estree@0.25.1:
     resolution: {integrity: sha512-0wUoCcLp+5Ev5pDW2OriHC2MJCbwLwuRx+gAqMTOkGKJJiBCLjtrvy4PWUGn6MIVefecRpzoOZ/UV6iGdOr+Cw==}
 
@@ -2080,6 +2237,10 @@ packages:
 
   is-bun-module@2.0.0:
     resolution: {integrity: sha512-gNCGbnnnnFAUGKeZ9PdbyeGYJqewpmc2aKHUEMO5nQPWU9lOmv7jcmQIv+qHD8fXW6W7qfuCwX4rY9LNRjXrkQ==}
+
+  is-core-module@2.16.1:
+    resolution: {integrity: sha512-UfoeMA6fIJ8wTYFEUjelnaGI67v6+N7qXJEvQuIGa99l4xsCruSYOVSQ0uPANn4dAzm8lkYPaKLrrijLq7x23w==}
+    engines: {node: '>= 0.4'}
 
   is-extglob@2.1.1:
     resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
@@ -2400,6 +2561,9 @@ packages:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
     engines: {node: '>=8'}
 
+  path-parse@1.0.7:
+    resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
+
   pathe@2.0.3:
     resolution: {integrity: sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w==}
 
@@ -2565,6 +2729,11 @@ packages:
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
+  resolve@1.22.11:
+    resolution: {integrity: sha512-RfqAvLnMl313r7c9oclB1HhUEAezcpLjz95wFH4LVuhk9JF/r22qmVP9AMmOU4vMX7Q8pN8jwNg/CSpdFnMjTQ==}
+    engines: {node: '>= 0.4'}
+    hasBin: true
+
   restore-cursor@5.1.0:
     resolution: {integrity: sha512-oMA2dcrw6u0YfxJQXm342bFKX/E4sG9rbTzO9ptUcR/e8A33cHuvStiYOwH7fszkZlZ1z/ta9AAoPk2F4qIOHA==}
     engines: {node: '>=18'}
@@ -2679,6 +2848,10 @@ packages:
   supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
+
+  supports-preserve-symlinks-flag@1.0.0:
+    resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
+    engines: {node: '>= 0.4'}
 
   synckit@0.11.11:
     resolution: {integrity: sha512-MeQTA1r0litLUf0Rp/iisCaL8761lKAZHaimlbGK4j0HysC4PLfqygQj9srcs0m2RdtDYnF8UuYyKpbjHYp7Jw==}
@@ -3304,6 +3477,41 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
+  '@ffmpeg-installer/darwin-arm64@4.1.5':
+    optional: true
+
+  '@ffmpeg-installer/darwin-x64@4.1.0':
+    optional: true
+
+  '@ffmpeg-installer/ffmpeg@1.1.0':
+    optionalDependencies:
+      '@ffmpeg-installer/darwin-arm64': 4.1.5
+      '@ffmpeg-installer/darwin-x64': 4.1.0
+      '@ffmpeg-installer/linux-arm': 4.1.3
+      '@ffmpeg-installer/linux-arm64': 4.1.4
+      '@ffmpeg-installer/linux-ia32': 4.1.0
+      '@ffmpeg-installer/linux-x64': 4.1.0
+      '@ffmpeg-installer/win32-ia32': 4.1.0
+      '@ffmpeg-installer/win32-x64': 4.1.0
+
+  '@ffmpeg-installer/linux-arm64@4.1.4':
+    optional: true
+
+  '@ffmpeg-installer/linux-arm@4.1.3':
+    optional: true
+
+  '@ffmpeg-installer/linux-ia32@4.1.0':
+    optional: true
+
+  '@ffmpeg-installer/linux-x64@4.1.0':
+    optional: true
+
+  '@ffmpeg-installer/win32-ia32@4.1.0':
+    optional: true
+
+  '@ffmpeg-installer/win32-x64@4.1.0':
+    optional: true
+
   '@floating-ui/core@1.7.3':
     dependencies:
       '@floating-ui/utils': 0.2.10
@@ -3332,6 +3540,8 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
+  '@ikigaians/ikgplayer@0.10.0-alpha.14': {}
+
   '@isaacs/balanced-match@4.0.1': {}
 
   '@isaacs/brace-expansion@5.0.0':
@@ -3356,6 +3566,92 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  '@libmedia/audioresample@1.2.0':
+    dependencies:
+      '@libmedia/avutil': 1.2.0
+      '@libmedia/cheap': 1.2.0
+      '@libmedia/common': 2.2.0
+
+  '@libmedia/audiostretchpitch@1.2.0':
+    dependencies:
+      '@libmedia/cheap': 1.2.0
+
+  '@libmedia/avcodec@1.2.0':
+    dependencies:
+      '@libmedia/avformat': 1.2.0
+      '@libmedia/avutil': 1.2.0
+      '@libmedia/cheap': 1.2.0
+      '@libmedia/common': 2.2.0
+
+  '@libmedia/avformat@1.2.0':
+    dependencies:
+      '@libmedia/avcodec': 1.2.0
+      '@libmedia/avprotocol': 1.2.0
+      '@libmedia/avutil': 1.2.0
+      '@libmedia/cheap': 1.2.0
+      '@libmedia/common': 2.2.0
+
+  '@libmedia/avnetwork@1.2.0':
+    dependencies:
+      '@libmedia/avformat': 1.2.0
+      '@libmedia/avprotocol': 1.2.0
+      '@libmedia/avutil': 1.2.0
+      '@libmedia/cheap': 1.2.0
+      '@libmedia/common': 2.2.0
+
+  '@libmedia/avpipeline@1.2.0':
+    dependencies:
+      '@libmedia/audioresample': 1.2.0
+      '@libmedia/audiostretchpitch': 1.2.0
+      '@libmedia/avcodec': 1.2.0
+      '@libmedia/avformat': 1.2.0
+      '@libmedia/avnetwork': 1.2.0
+      '@libmedia/avprotocol': 1.2.0
+      '@libmedia/avrender': 1.2.0
+      '@libmedia/avutil': 1.2.0
+      '@libmedia/cheap': 1.2.0
+      '@libmedia/common': 2.2.0
+
+  '@libmedia/avplayer@1.2.2':
+    dependencies:
+      '@libmedia/audioresample': 1.2.0
+      '@libmedia/audiostretchpitch': 1.2.0
+      '@libmedia/avcodec': 1.2.0
+      '@libmedia/avformat': 1.2.0
+      '@libmedia/avnetwork': 1.2.0
+      '@libmedia/avpipeline': 1.2.0
+      '@libmedia/avprotocol': 1.2.0
+      '@libmedia/avrender': 1.2.0
+      '@libmedia/avutil': 1.2.0
+      '@libmedia/cheap': 1.2.0
+      '@libmedia/common': 2.2.0
+      ass-compiler: 0.1.16
+      assjs: 0.1.4
+
+  '@libmedia/avprotocol@1.2.0':
+    dependencies:
+      '@libmedia/avutil': 1.2.0
+      '@libmedia/cheap': 1.2.0
+      '@libmedia/common': 2.2.0
+
+  '@libmedia/avrender@1.2.0':
+    dependencies:
+      '@libmedia/avutil': 1.2.0
+      '@libmedia/cheap': 1.2.0
+      '@libmedia/common': 2.2.0
+
+  '@libmedia/avutil@1.2.0':
+    dependencies:
+      '@libmedia/cheap': 1.2.0
+      '@libmedia/common': 2.2.0
+
+  '@libmedia/cheap@1.2.0':
+    dependencies:
+      '@libmedia/common': 2.2.0
+      commander: 13.1.0
+
+  '@libmedia/common@2.2.0': {}
 
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
@@ -3677,6 +3973,23 @@ snapshots:
   '@radix-ui/rect@1.1.1': {}
 
   '@rolldown/pluginutils@1.0.0-beta.53': {}
+
+  '@rollup/plugin-typescript@12.3.0(rollup@4.54.0)(tslib@2.8.1)(typescript@5.9.3)':
+    dependencies:
+      '@rollup/pluginutils': 5.3.0(rollup@4.54.0)
+      resolve: 1.22.11
+      typescript: 5.9.3
+    optionalDependencies:
+      rollup: 4.54.0
+      tslib: 2.8.1
+
+  '@rollup/pluginutils@5.3.0(rollup@4.54.0)':
+    dependencies:
+      '@types/estree': 1.0.8
+      estree-walker: 2.0.2
+      picomatch: 4.0.3
+    optionalDependencies:
+      rollup: 4.54.0
 
   '@rollup/rollup-android-arm-eabi@4.54.0':
     optional: true
@@ -4251,6 +4564,10 @@ snapshots:
 
   array-ify@1.0.0: {}
 
+  ass-compiler@0.1.16: {}
+
+  assjs@0.1.4: {}
+
   ast-types@0.16.1:
     dependencies:
       tslib: 2.8.1
@@ -4346,6 +4663,8 @@ snapshots:
   color-name@1.1.4: {}
 
   colorette@2.0.20: {}
+
+  commander@13.1.0: {}
 
   commander@14.0.2: {}
 
@@ -4623,6 +4942,8 @@ snapshots:
 
   estraverse@5.3.0: {}
 
+  estree-walker@2.0.2: {}
+
   esutils@2.0.3: {}
 
   eventemitter3@5.0.1: {}
@@ -4670,6 +4991,8 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
+  function-bind@1.1.2: {}
+
   gensync@1.0.0-beta.2: {}
 
   get-caller-file@2.0.5: {}
@@ -4714,6 +5037,10 @@ snapshots:
 
   has-flag@4.0.0: {}
 
+  hasown@2.0.2:
+    dependencies:
+      function-bind: 1.1.2
+
   hermes-estree@0.25.1: {}
 
   hermes-parser@0.25.1:
@@ -4746,6 +5073,10 @@ snapshots:
   is-bun-module@2.0.0:
     dependencies:
       semver: 7.7.3
+
+  is-core-module@2.16.1:
+    dependencies:
+      hasown: 2.0.2
 
   is-extglob@2.1.1: {}
 
@@ -5005,6 +5336,8 @@ snapshots:
 
   path-key@3.1.1: {}
 
+  path-parse@1.0.7: {}
+
   pathe@2.0.3: {}
 
   picocolors@1.1.1: {}
@@ -5092,6 +5425,12 @@ snapshots:
   resolve-from@5.0.0: {}
 
   resolve-pkg-maps@1.0.0: {}
+
+  resolve@1.22.11:
+    dependencies:
+      is-core-module: 2.16.1
+      path-parse: 1.0.7
+      supports-preserve-symlinks-flag: 1.0.0
 
   restore-cursor@5.1.0:
     dependencies:
@@ -5207,6 +5546,8 @@ snapshots:
   supports-color@7.2.0:
     dependencies:
       has-flag: 4.0.0
+
+  supports-preserve-symlinks-flag@1.0.0: {}
 
   synckit@0.11.11:
     dependencies:

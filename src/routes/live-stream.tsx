@@ -7,21 +7,17 @@ export const Route = createFileRoute('/live-stream')({
 })
 
 function RouteComponent() {
-  const live =
-    'https://livepull-bpsry.iki-utl.cc/live/aro0011lo.m3u8?abr_pts=-1000'
-  const live2 =
-    'https://livepull-bpsry.iki-utl.cc/live/aro0021lo.m3u8?abr_pts=-1000'
-
-  const sicbo =
-    'https://livepull-bpsry.iki-utl.cc/live/asb0011lo.m3u8?abr_pts=-1000'
+  const url = 'https://livepull-tcgi.iki-utl.cc/live/asb0011lo.flv'
+  const url2 = 'https://livepull-tcgi.iki-utl.cc/live/aro0011lo.flv'
+  const url3 = 'https://livepull-tcgi.iki-utl.cc/live/aro0021lo.flv'
 
   return (
     <div className="w-fit p-4">
       <div className="w-screen-max h-screen-max mx-auto">
         <div className="flex flex-wrap gap-4">
-          <TimeShiftingVideo url={live} />
-          <TimeShiftingVideo url={live2} />
-          <TimeShiftingVideo url={sicbo} />
+          <TimeShiftingVideo url={url} />
+          <TimeShiftingVideo url={url2} />
+          <TimeShiftingVideo url={url3} />
         </div>
       </div>
     </div>

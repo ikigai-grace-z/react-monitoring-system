@@ -75,7 +75,7 @@ const TimeShiftingVideo = ({ url }: TimeShiftingVideoProps) => {
         setSeekableRange({ end, start })
 
         const gap = Math.abs(currentVideoTime - end)
-        const isAtLive = gap < liveThreshold || (end > 0 && gap / end < 0.01) // 相對誤差 < 1%
+        const isAtLive = gap < liveThreshold || (end > 0 && gap / end < 0.01)
         setIsLive(isAtLive)
 
         if (!isAtLive && currentVideoTime > 0 && end > 0) {
@@ -89,36 +89,13 @@ const TimeShiftingVideo = ({ url }: TimeShiftingVideoProps) => {
       }
     })
 
-    // Listen to seek events
-    // player.on('seeked', () => {
-    //   if (!player.player) return
-    //   const video = player.player.video
-    //   if (video) {
-    //     console.log('🎬 Seeked event fired:', {
-    //       currentTime: video.currentTime.toFixed(2),
-    //       paused: video.paused,
-    //       readyState: video.readyState,
-    //     })
-    //   }
-    // })
-
-    // player.on('seeking', () => {
-    //   if (!player.player) return
-    //   const video = player.player.video
-    //   if (video) {
-    //     console.log('⏳ Seeking event fired:', {
-    //       targetTime: video.currentTime.toFixed(2),
-    //     })
-    //   }
-    // })
-
     return () => {
       if (playerRef.current) {
         playerRef.current.destroy()
         playerRef.current = null
       }
     }
-  }, [url, playerId]) // 移除 playerId 依赖，因为它现在是稳定的 ref
+  }, [url, playerId])
 
   // Go to live point
   const goToLive = useCallback(() => {
@@ -130,31 +107,20 @@ const TimeShiftingVideo = ({ url }: TimeShiftingVideoProps) => {
 
     const liveEdge = video.seekable.end(0)
 
-    console.log('🔴 Going to live:', {
-      currentTime: video.currentTime.toFixed(2),
-      gap: (liveEdge - video.currentTime).toFixed(2),
-      liveEdge: liveEdge.toFixed(2),
-    })
-
-    // Resume normal playback rate for live
     video.playbackRate = 1.0
-    // Seek to live edge using native video element (更精確)
-    video.currentTime = liveEdge
-    console.log('Seeking to live time:', video.currentTime)
-    // Verify we reached live point
-    // setTimeout(() => {
-    //   const actualTime = video.currentTime
-    //   const currentLiveEdge = video.seekable.end(0)
-    // console.log('✅ Live verification:', {
-    //   expected: liveEdge.toFixed(2),
-    //   actual: actualTime.toFixed(2),
-    //   currentLiveEdge: currentLiveEdge.toFixed(2),
-    //   isAtLive: Math.abs(actualTime - currentLiveEdge) < 3,
-    // })
-    // }, 300)
+
+    player.player.seek(liveEdge)
+
+    if (player.switchURL) {
+      player.switchURL(url)
+    } else {
+      // 舊版本回退方案
+      player.destroy()
+      playerRef.current = new VePlayer({ /* ...配置... */ url })
+    }
 
     setIsLive(true)
-  }, [])
+  }, [url])
 
   // Seek to specified time
   const seekToOffset = useCallback(
@@ -171,17 +137,6 @@ const TimeShiftingVideo = ({ url }: TimeShiftingVideoProps) => {
         seekableRange.start,
         Math.min(seekableRange.end, targetTime)
       )
-
-      console.log('⏩ Seeking offset:', {
-        clampedTime: newTime.toFixed(2),
-        currentVideoTime: currentVideoTime.toFixed(2),
-        offsetSeconds,
-        seekableRange: {
-          end: seekableRange.end.toFixed(2),
-          start: seekableRange.start.toFixed(2),
-        },
-        targetTime: targetTime.toFixed(2),
-      })
 
       // Pause before seeking to prevent auto-catchup
       const wasPaused = video.paused
@@ -245,22 +200,22 @@ const TimeShiftingVideo = ({ url }: TimeShiftingVideoProps) => {
         Math.min(seekableRange.end, time)
       )
 
-      console.log('🎯 Jumping to time:', {
-        clampedTime: newTime.toFixed(2),
-        input: timeInput,
-        parsedTime: time.toFixed(2),
-        seekableRange: {
-          end: seekableRange.end.toFixed(2),
-          start: seekableRange.start.toFixed(2),
-        },
-      })
+      // console.log('🎯 Jumping to time:', {
+      //   clampedTime: newTime.toFixed(2),
+      //   input: timeInput,
+      //   parsedTime: time.toFixed(2),
+      //   seekableRange: {
+      //     end: seekableRange.end.toFixed(2),
+      //     start: seekableRange.start.toFixed(2),
+      //   },
+      // })
 
       // Pause before seeking
       const wasPaused = video.paused
       video.pause()
 
       // 使用 video.currentTime 而不是 player.player.currentTime（更精確）
-      video.currentTime = newTime
+      player.player.seek(newTime)
 
       // Verify jump operation after a short delay
       setTimeout(() => {
