@@ -2,15 +2,13 @@ import { createFileRoute } from '@tanstack/react-router'
 
 import LibMediaPlayer from '@/features/video/libmediaPlayer'
 
+import { url, url2, url3 } from './-constants'
+
 export const Route = createFileRoute('/live-stream-libmedia')({
   component: RouteComponent,
 })
 
 function RouteComponent() {
-  const url = 'https://livepull-tcgi.iki-utl.cc/live/asb0011lo.flv'
-  const url2 = 'https://livepull-tcgi.iki-utl.cc/live/aro0011lo.flv'
-  const url3 = 'https://livepull-tcgi.iki-utl.cc/live/aro0021lo.flv'
-
   return (
     <div className="container w-full p-4">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
