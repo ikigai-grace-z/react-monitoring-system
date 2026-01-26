@@ -27,7 +27,7 @@ const TimeShiftingVideo = ({ url }: TimeShiftingVideoProps) => {
 
     // Initialize BytePlus VEPlayer
     const player = new VePlayer({
-      autoplay: true,
+      autoplay: false,
       closeVideoClick: false,
       closeVideoTouch: false,
       controls: true,
