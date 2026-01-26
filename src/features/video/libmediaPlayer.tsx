@@ -330,20 +330,20 @@ const LibMediaPlayer = ({
 
       {isLoading && (
         <div className="bg-opacity-50 absolute inset-0 flex items-center justify-center bg-black">
-          <div className="text-white">加载中...</div>
+          <div className="text-white">loading...</div>
         </div>
       )}
 
       {error && (
         <div className="bg-opacity-75 absolute inset-0 flex items-center justify-center bg-black">
           <div className="text-center text-red-500">
-            <p className="mb-2 font-semibold">播放错误</p>
+            <p className="mb-2 font-semibold">error</p>
             <p className="text-sm">{error}</p>
           </div>
         </div>
       )}
 
-      {/* 控制栏 */}
+      {/* control */}
       <div className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent p-4">
         <div className="flex items-center gap-2">
           <button
@@ -351,14 +351,14 @@ const LibMediaPlayer = ({
             className="rounded bg-white/20 px-4 py-2 text-white transition hover:bg-white/30"
             // disabled={isLoading || !!error}
           >
-            {isPlaying ? '暂停' : '播放'}
+            {isPlaying ? 'Pause' : 'Play'}
           </button>
           <button
             onClick={handleStop}
             className="rounded bg-white/20 px-4 py-2 text-white transition hover:bg-white/30"
             disabled={isLoading || !!error}
           >
-            停止
+            Stop
           </button>
         </div>
       </div>

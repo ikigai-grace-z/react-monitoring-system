@@ -6,7 +6,6 @@ import {
   MonitorPlay,
   Play,
   Plus,
-  Video,
 } from 'lucide-react'
 import * as React from 'react'
 
@@ -36,29 +35,29 @@ const data = {
       items: [
         {
           icon: Play,
-          route: '/live-stream-libmedia',
-          title: 'Live - libmediaPlayer',
-        },
-        {
-          icon: Play,
           route: '/live-stream',
           title: 'Live - byteplus',
         },
         {
           icon: Play,
-          route: '/live-stream-ikgplayer',
-          title: 'Live - ikgplayer',
+          route: '/live-stream-libmedia',
+          title: 'Live - libmediaPlayer',
         },
+        // {
+        //   icon: Play,
+        //   route: '/live-stream-ikgplayer',
+        //   title: 'Live - ikgplayer',
+        // },
         {
           icon: ListVideo,
           route: '/vod',
           title: 'VOD',
         },
-        {
-          icon: Video,
-          route: '/time-shifting',
-          title: 'Time shifting',
-        },
+        // {
+        //   icon: Video,
+        //   route: '/time-shifting',
+        //   title: 'Time shifting',
+        // },
         {
           icon: MonitorPlay,
           title: 'Monitoring system',
